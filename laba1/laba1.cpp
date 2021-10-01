@@ -3,8 +3,8 @@
 
 #include <iostream>
 using namespace std;
-class Massiv {
 
+class Massiv {
 public:
 	void create(int* mass, int value)  //создание массива
 	{
@@ -13,24 +13,19 @@ public:
 			cin >> mass[x];
 		}
 	}
-public:
 	void output(int* mass, int value) { //вывод массива
 		for (int x = 0; x < value; x++) {
 			cout << mass[x] << "\n";
 		}
 	}
-public:
 	int Search(int* mass, int value, int index) { //вывод массива
-		int searched_obj = 0;
 		for (int x = 0; x < value; x++) {
 			if (x == index) {
 				return mass[x];
 			}
 		}
 	}
-public:
 	void Sort(int* mass, int value) { //вывод массива
-
 		int min, temp; // для поиска минимального элемента и для обмена
 		for (int i = 0; i < value - 1; i++)
 		{
@@ -81,10 +76,9 @@ int main()
 			Work_Mass.output(mass, value);
 			break;
 		case 3:
-
 			cout << "Введите значение от 1 до " << value << '\n';
 			cin >> search;
-			while (search<1 || search > value) {
+			while (search < 1 || search > value) {
 				cout << "Введите значение от 1 до " << value << '\n';
 				cin >> search;
 			}
